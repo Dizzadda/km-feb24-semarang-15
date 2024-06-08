@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profit And Sales PerCategory</title>
+    <!-- CDN chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="assets/css/Recommendation_styles.css" />
+
+    <!-- favicon logo -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/TEAM 15.webp"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/7958c49adb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="assets/img/TEAM 15.webp" alt="" />
+          </span>
+          <div class="text">
+            <span class="name">Superstore</span>
+            <span class="profession" style="font-size: 14px"
+              >Recommendation</span
+            >
+            <span class="profession" style="font-size: 14px">Conclusion</span>
+          </div>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-links">
+              <a href="index.html">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Home</span>
+              </a>
+            </li>
+            <li class="nav-links">
+              <a id="analytics-link" href="analytics.html">
+                <i class="bx bx-pie-chart-alt icon"></i>
+                <span class="text nav-text">Analytics</span>
+              </a>
+            </li>
+            <li class="nav-links">
+              <a href="ResearchQuestion.html">
+                <i class="bx bx-search-alt-2 icon"></i>
+                <span class="text nav-text">Research <br />Question</span>
+              </a>
+            </li>
+            <li class="nav-links">
+              <a href="recommendation&Conclussion.html">
+                <i class="bx bx-check-circle icon"></i>
+                <span class="text nav-text"
+                  >Recommendation <br />& Conclusion</span
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-content">
+          <li class="mode">
+            <div class="sun-moon">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Dark mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <!-- hamburger menu -->
+    <div class="hamburger">
+      <div id="btn" class="nav-hamburger">
+        <i class="bx bx-x" id="btn"></i>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+    </div>
+    <main>
+      <section id="recommendation">
+        <div class="header__title">
+          <h1>Recommendation</h1>
+          <div class="line__title_recommendation"></div>
+        </div>
+        <div class="content">
+          <div class="content-card">
+            <i class="fa-solid fa-angles-right"></i>
+            <p>
+              To increase profits in the Central region, sales in the technology category as the biggest profit contributor need to be optimized.
+            </p>
+          </div>
+          <div class="content-card">
+            <i class="fa-solid fa-angles-right"></i>
+            <p>
+              To increase profits, it is better to focus on sales in the western region.
+            </p>
+          </div>
+          <div class="content-card">
+            <i class="fa-solid fa-angles-right"></i>
+            <p>
+              Home office is the segment with the smallest profits, so optimal efforts are needed to increase profits.
+            </p>
+          </div>
+          <div class="content-card">
+            <i class="fa-solid fa-angles-right"></i>
+            <p>
+              Conduct extensive testing and validation by involving more users from diverse backgrounds.
+            </p>
+          </div>
+          <div class="content-card">
+            <i class="fa-solid fa-angles-right"></i>
+            <p>
+              To ensure the website remains relevant and meets user needs, it is recommended to continue its development by adding new features and improving the user interface.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="conclusion">
+        <div class="header__title">
+          <h1>Conclusion</h1>
+          <div class="line__title_conclusion"></div>
+        </div>
+        <div class="content">
+          <div class="content-card">
+            <i class="fa-solid fa-angles-right"></i>
+            <p>
+              The regions with the highest performance are the West region, then the East, South and Central regions in order.
+            </p>
+          </div>
+          <div class="content-card">
+            <i class="fa-solid fa-angles-right"></i>
+            <p>
+              Of the 3 categories, Technology and Office Supplies are the best in terms of profits. Furniture still makes a profit but overall it doesn't make a good profit. Even in terms of sales figures, Furniture is the best in terms of sales.
+            </p>
+          </div>
+          <div class="content-card">
+            <i class="fa-solid fa-angles-right"></i>
+            <p>
+              Sales in all segments increased from year to year, with the highest growth being in the Consumer segment, followed by corporate and then Home Office. Home Office oriented Office Supplies products are the most profitable.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="line-footer"></div>
+      <p class="title__footer">
+        Kampus Merdeka X RevoU Tech Academy | Copyright © 2024 Team 15 Section
+        Semarang. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var lastAnalyticsPage = localStorage.getItem("lastAnalyticsPage");
+        if (lastAnalyticsPage) {
+          document.getElementById("analytics-link").href = lastAnalyticsPage;
+        }
+      });
+    </script>
+
+    <script src="assets/js/profit-sales-perCategory.js"></script>
+    <script src="assets/js/navbar.js"></script>
+  </body>
+</html>
